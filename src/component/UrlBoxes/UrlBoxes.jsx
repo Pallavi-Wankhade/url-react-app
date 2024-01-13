@@ -19,7 +19,7 @@ const UrlBoxes = () => {
       .then((res) => res.json())
       .then((result) => {
         setUrlData(result);
-        console.log("Fetched data is", result);
+        // console.log("Fetched data is", result);
       });
   };
 
