@@ -29,11 +29,15 @@ const UrlBoxes = () => {
 
   const submitUrlHandler = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/url`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ origUrl }),
-      });
+      // const response = await fetch(`http://localhost:3000/url`, {
+      const response = await fetch(
+        `https://url-shortner-server-mask.onrender.com/url`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ origUrl }),
+        }
+      );
       const result = await response.json();
       setShortUrl(result.shortUrl);
       setUrlData(result);
