@@ -14,8 +14,8 @@ const UrlBoxes = () => {
   // };
 
   const showAllData = () => {
-    // fetch("http://localhost:3000/url")
-    fetch("https://url-shortner-server-mask.onrender.com/url")
+    // fetch("http://localhost:3000")
+    fetch("https://url-shortner-server-mask.onrender.com")
       .then((res) => res.json())
       .then((result) => {
         setUrlData(result);
